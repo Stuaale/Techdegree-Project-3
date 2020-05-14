@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
+
     <body>
 
       <form action="index.html" method="post">
@@ -18,9 +19,9 @@
         <p>Get the latest news on how your code is doing right in your inbox</p>
       </div><!--end of header section-->
 
-      <fieldset class="contact-fieldset">
+      <fieldset>
 
-        <legend>Contact Information</legend>
+        <legend class="contact-legend">Contact Information</legend>
 
           <label for=name>Full Name:</label>
           <input type="text" id="name" name="user_name" required="required" placeholder="Required">
@@ -95,14 +96,17 @@
 
       <fieldset>
 
-        <div> <!--Secondary Legend-->
+        <div class="newsletter-legend"> <!--Secondary Legend-->
           <legend>Newsletter</legend>
           <p>Select the newsletter you would like to receive</p>
         </div>
 
-            <input type="checkbox" id="html" value="interest_html" name="interest_html"><label class="light" for="development">HTML News</label><br>
-            <input type="checkbox" id="css" value="interest_css" name="interest_css"><label class="light" for="development">CSS News</label><br>
+        <div class="news-type">
+            <input type="checkbox" id="html" value="interest_html" name="interest_html"><label class="light" for="development">HTML News</label>
+            <input type="checkbox" id="css" value="interest_css" name="interest_css"><label class="light" for="development">CSS News</label>
             <input type="checkbox" id="javascript" value="interest_javascript" name="interest_javascript"><label class="light" for="business">Javascipt News</label>
+        </div>
+
         <label>Newsletter Format:</label>
             <input type="radio" id="html" value="html_format" name="newsletter_format"><label for="html" class="light">HTML</label><br>
             <input type="radio" id="plain_text" value="plain_text_format" name="newsletter_format"><label for="plain_text" class="light">Plain text</label>
