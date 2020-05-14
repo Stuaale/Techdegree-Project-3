@@ -1,29 +1,51 @@
+*{box-sizing: border-box;}
 
-body {
-  font-family: 'Nunito', sans-serif;
+
+
+====================================
+/*Base Styles*/
+====================================
+
+body{
+  font-family: 'Merriweather', serif;
   color: #384047;
 }
 
 form {
   max-width: 300px;
-  margin: 10px auto;
-  padding: 10px 20px;
-  background: #f4f7f8;
+  margin: 0px auto;
+  padding: 0px 20px;
+  background: white;
   border-radius: 8px;
 }
 
-h1 {
-  margin: 0 0 30px 0;
+.form-header{
   text-align: center;
+  border-bottom: solid 3px #263340;
 }
 
+h1 {
+  text-transform: uppercase;
+  background: #263340;
+  color: white;
+  padding: 1em 0;
+  min-height: 3em;
+  margin: 0;
+}
+
+h2,
+legend{
+  color: #263340;
+  display: inline-block;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+
+
 input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
 input[type="email"],
 input[type="number"],
-input[type="search"],
 input[type="tel"],
 input[type="time"],
 input[type="url"],
@@ -48,12 +70,6 @@ input[type="checkbox"] {
   margin: 0 4px 8px 0;
 }
 
-select {
-  padding: 6px;
-  height: 32px;
-  border-radius: 2px;
-}
-
 button {
   padding: 19px 39px 18px 39px;
   color: #FFF;
@@ -70,38 +86,20 @@ button {
 }
 
 fieldset {
-  margin-bottom: 30px;
   border: none;
+  padding: 0;
 }
 
-legend {
-  font-size: 1.4em;
-  margin-bottom: 10px;
-}
+
+
+
 
 label {
   display: block;
   margin-bottom: 8px;
 }
 
-label.light {
-  font-weight: 300;
-  display: inline;
-}
 
-.number {
-  background-color: #5fcf80;
-  color: #fff;
-  height: 30px;
-  width: 30px;
-  display: inline-block;
-  font-size: 0.8em;
-  margin-right: 4px;
-  line-height: 30px;
-  text-align: center;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
-  border-radius: 100%;
-}
 
 @media screen and (min-width: 480px) {
 
