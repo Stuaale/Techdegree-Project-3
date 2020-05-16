@@ -12,13 +12,11 @@ body{
 }
 
 form {
-  max-width: 300px;
+  max-width: 350px;
   margin: 0px auto;
   padding: 0px;
   background: white;
   border-radius: 8px;
-  display: flex;
-  flex-direction: column;
 }
 
 
@@ -41,14 +39,21 @@ legend{
   font-weight: bold;
 }
 
+input,
+legend{
+margin-bottom: 15px;
+
+}
+
+p{
+  margin-top: 0;
+}
 
 
 input[type="text"],
 input[type="email"],
 input[type="number"],
 input[type="tel"],
-input[type="time"],
-input[type="url"],
 textarea,
 select {
   background: rgba(255,255,255,0.1);
@@ -63,11 +68,36 @@ select {
   color: #8a97a0;
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
   margin-bottom: 30px;
+  border-radius: 5px;
 }
 
 input[type="radio"],
-input[type="checkbox"] {
-  margin: 0;
+input[type="checkbox"],
+label.light {
+  margin: 10px 0 0 10px;
+  display: inline-block;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus
+{
+border: solid 2px #263340;
+}
+
+input::placeholder{
+  text-align: right;
+  font-style: italic;
+  font-size: 0.8em;
+  padding-right:10px;
+}
+
+textarea{
+  border-radius: 5px;
+  height: 10em;
 }
 
 
@@ -98,6 +128,15 @@ label {
   margin-bottom: 8px;
 }
 
+footer{
+  text-align: center;
+  font-style: italic;
+  color: lightgrey;
+  min-height: 3em;
+  padding: 1.5em
+}
+
+
 /* ====================================
 Styles
 ==================================== */
@@ -111,9 +150,12 @@ Styles
 
 .contact-legend,
 .newsletter-legend{
-  padding: 1em 0;
+  padding-top: 1em;
   border-top: solid 1px #263340;
   width: 100%;
+  margin-bottom: 1em;
+
+
 }
 
 #zip{
@@ -121,8 +163,24 @@ Styles
 }
 
 .news-type{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding-bottom: 2em;
+  display: inline-block;
+  padding-bottom: 1em;
+}
+
+.news-format,
+.text{
+  padding: 1em 0;
+}
+
+/* ====================================
+Media Queries
+==================================== */
+
+@media screen and (min-width: 769px) {
+
+  form {
+    min-width: 100%;
+  }
+
+
 }
