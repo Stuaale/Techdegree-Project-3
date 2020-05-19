@@ -20,7 +20,6 @@ form {
 }
 
 
-
 h1 {
   text-transform: uppercase;
   background: #263340;
@@ -39,10 +38,14 @@ legend{
   font-weight: bold;
 }
 
-input,
-legend{
+
+input{
 margin-bottom: 15px;
 
+}
+
+legend{
+  padding-top: 1em;
 }
 
 p{
@@ -175,6 +178,14 @@ Styles
   padding: 0 1em 1em;
 }
 
+.contact-legend{
+  width: 100%;
+  background: #EEF7FF;
+  padding: 1em .7em;
+  border-top: solid 1px #263340;
+  }
+
+
 #zip{
   max-width: 50%;
 }
@@ -184,23 +195,10 @@ Styles
   padding-bottom: 1em;
 }
 
-.news-format,
-.text,
-.contact-legend,
-.newsletter-legend
-{
-  padding: 1em 0;
-}
-
 
 .button{
   background: #EEF7FF;
   padding: 0 0.7em 0.7em 1em;
-}
-
-.user-details,
-.newsletter-pref{
-  border-top: solid 1px #263340;
 }
 
 .details,
@@ -210,8 +208,7 @@ Styles
 
 
 .newsletter-pref,
-.user-details,
-.text
+.user-details
 {
   padding: 0 .7em;
 }
