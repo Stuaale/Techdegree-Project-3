@@ -12,9 +12,9 @@ body{
 }
 
 form {
-  max-width: 350px;
+  max-width: 700px;
   margin: 0px auto;
-  padding: 0px;
+  padding: 0;
   background: white;
   border-radius: 8px;
 }
@@ -46,7 +46,7 @@ margin-bottom: 15px;
 }
 
 p{
-  margin-top: 0;
+  margin: 0;
 }
 
 
@@ -65,9 +65,8 @@ select {
   padding: 15px;
   width: 100%;
   background-color: #e8eeef;
-  color: #8a97a0;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-  margin-bottom: 30px;
+  color: #4B6B70;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.03) inset;
   border-radius: 5px;
 }
 
@@ -76,44 +75,25 @@ input[type="checkbox"],
 label.light {
   margin: 10px 0 0 10px;
   display: inline-block;
-  -webkit-appearance: none;
-  appearance: none;
+
   }
-
-  input[type="checkbox"] {
-    position: relative;
-    width: 1em;
-    height: 1em;
-    border: 1px solid gray;
-    vertical-align: 0px;
-    color: green;
-    border-radius: 2px;
-}
-
-input[type="checkbox"]:checked::before {
-  visibility: visible;
-}
-
-input[type="checkbox"]::before {
-  content: "✔";
-  position: relative;
-  font-size: 1em;
-  right: -1px;
-  top: -0.3em;
-  background-color: blue;
-  visibility: hidden;
-  height: 1em;
-  width: 1em;
-}
-
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="text"]:focus,
-input[type="number"]:focus,
+input[type="tel"]:focus,
 input[type="checkbox"]:focus
 {
 border: solid 2px #263340;
+}
+
+input,
+textarea{
+  transition: background-color .5s ease .1s;
+}
+input:focus,
+textarea:focus {
+  background-color: white;
 }
 
 input::placeholder{
@@ -128,6 +108,8 @@ input::placeholder{
 textarea{
   border-radius: 5px;
   height: 10em;
+  margin-bottom: 0;
+  margin-top: 1em;
 }
 
 
@@ -135,21 +117,29 @@ textarea{
 button {
   padding: 19px 39px 18px 39px;
   color: #FFF;
-  background-color: #4bc970;
+  background-color: #3C5772;
   font-size: 18px;
   text-align: center;
   font-style: normal;
   border-radius: 5px;
   width: 100%;
-  border: 1px solid #3ac162;
+  border: 1px solid #263340;
   border-width: 1px 1px 3px;
   box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
-  margin-bottom: 10px;
+  margin-bottom:  10px;
+  margin-top: 1em;
+  cursor: pointer;
 }
 
-fieldset {
+button:hover {background-color: #264C73}
+
+
+fieldset
+{
   border: none;
   padding: 0;
+  margin: 0;
+  background: #EEF7FF;
 }
 
 
@@ -163,7 +153,8 @@ footer{
   font-style: italic;
   color: lightgrey;
   min-height: 3em;
-  padding: 1.5em
+  padding: 1.5em;
+  margin: 0;
 }
 
 
@@ -173,23 +164,19 @@ Styles
 
 .form-header{
   text-align: center;
-  border-bottom: solid 3px #263340;
   width: 100%;
-  margin-bottom: 0.2em;
+
 }
 
-.contact-legend,
-.newsletter-legend{
-  padding-top: 1em;
-  border-top: solid 1px #263340;
-  width: 100%;
-  margin-bottom: 1em;
-
-
+.header-text{
+  margin: 0 0 1em 0;
+  border-bottom: solid 3px #263340;
+  margin-bottom: 0.2em;
+  padding: 0 1em 1em;
 }
 
 #zip{
-  width: 50%;
+  max-width: 50%;
 }
 
 .news-type{
@@ -198,19 +185,107 @@ Styles
 }
 
 .news-format,
-.text{
+.text,
+.contact-legend,
+.newsletter-legend
+{
   padding: 1em 0;
 }
+
+
+.button{
+  background: #EEF7FF;
+  padding: 0 0.7em 0.7em 1em;
+}
+
+.user-details,
+.newsletter-pref{
+  border-top: solid 1px #263340;
+}
+
+.details,
+.news-format{
+  margin-bottom: 1.5em;
+}
+
+
+.newsletter-pref,
+.user-details,
+.text
+{
+  padding: 0 .7em;
+}
+
 
 /* ====================================
 Media Queries
 ==================================== */
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
 
   form {
     min-width: 100%;
   }
+
+main
+  {
+    padding: 0 .7em;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.03) inset;
+  }
+
+h2
+{
+  padding-top: 1em;
+}
+
+label{
+  margin: 0;
+}
+
+textarea{
+  margin-top: 1.5em;
+}
+
+  .header-text{
+    max-width: 778px;
+    margin: 0 auto;
+    margin-bottom: 0.2em;
+    padding-bottom: 2em;
+  }
+
+
+
+  .details{
+    display: flex;
+    align-items: center;
+  }
+
+  .user-details input,
+  .user-details select{
+    flex-basis: 70%;
+    flex-grow: 1;
+  }
+
+
+  .user-details label{
+    flex-basis: 25%;
+  }
+
+
+
+#zip{
+  max-width: 25%;
+
+}
+
+.button{
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
 
 
 }
